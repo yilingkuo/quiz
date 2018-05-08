@@ -36,22 +36,18 @@ function dataUploaded() {
 }
 
 function checkCorrectAnswer(questionid, answer){
-	alert(questionid+ ' take user answer:'+answer);
-	
-function compareUserAnswer(questiondata){
 	var questionjson=JSON.parse(questiondata);
 	alert(questionjson[0].type);
 	
 	for(var i = 0; i < questionjson[0].features.length; i++) {
 	var feature = questionjson[0].features[i];
-	if (questionid==feature["properties"]["id"]){
-		alert('loop to'+questionid+feature["properties"]["id"]+'now')
+	// start compare if question number matches	
+	if (questionid==feature["properties"]["id"])
+// set condition whether user answer matches with correct_answer
 		if (answer==feature["properties"]["correct_answer"]){
 		alert('You are correct, the answer is: '+feature["properties"]["correct_answer"])}
-		else{alert('Wrong answer! The correct answer is:'+feature["properties"]["correct_answer"])}
-	}else{alert('next one!')}
-			
-	}
-}
-compareUserAnswer(questiondata);	
+		else{alert('Wrong answer! The correct answer is:'+feature["properties"]["correct_answer"])};		
+	};
+
+	
 }
