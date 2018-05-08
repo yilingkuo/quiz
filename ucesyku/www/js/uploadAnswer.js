@@ -35,7 +35,10 @@ function dataUploaded() {
 
 }
 
+// Loop through the question JSON data and get the properties needed
+// questiondata is request(GET) from "http://developer.cege.ucl.ac.uk:30269/getPOI" after loading the question from server
 function checkCorrectAnswer(questionid, answer){
+	//convert text to JSON
 	var questionjson=JSON.parse(questiondata);
 	alert(questionjson[0].type);
 	
