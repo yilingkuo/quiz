@@ -1,0 +1,77 @@
+<!--
+COde adapted from: https://www.w3schools.com/howto/howto_css_overlay.asp
+accessed: 08 May 2018
+-->
+<html lang="en">
+  <head>
+
+<style type="text/css">
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+.material-icons {
+font-size: 36px;
+}
+
+</style>
+
+  </head>
+<body>
+<!--
+apply #test css style and put user guide below 
+-->
+
+
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+<div class="mdl-card mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+<div class="mdl-layout--fixed-header mdl-layout__header-row">
+          <h3>Movie Quiz App</h3>
+        </div>
+<div class="section-center mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+<div class="mdl-layout__tab-panel is-active" id="overview">
+<div class="mdl-layout--fixed-header mdl-layout__header-row"> </div>
+<h4>
+Hi there, welcome to the movie filming quiz game!</h4>
+<h5>
+Here are some tips for you. </br>Let me guide you where to start!</h5>
+<h6><i class="material-icons" role="presentation">account_circle</i>
+First enter your user name. After clicking this icon, an expanded text field will shows.
+</h6>
+
+<h6><i class="material-icons" role="presentation">my_location</i>
+This button helps you tracks your location
+</h6>
+
+<h6><i class="material-icons" role="presentation">theaters</i>
+After you are satisfied your with where are you located, click here to open some filming location questions 
+</h6>
+
+<h6>
+After selecting a option from the popup window of a marker, click 'submit your answer'.</h6>
+<h6>
+Something might goes wrong during the process of submission, this can be checked by looking the area below:</br>
+--If the answer is submit successfully, the result will show 'answer row is inserted'</br>
+--If not, it will show 'the data has mistake'. When submission fails, please restart the http server.
+</h6>
+</div>
+</div>
+</div><div class="mdl-layout-spacer"></div>
+</div>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-amber.min.css">
+
+  </body>
+</html>
