@@ -1,10 +1,10 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Quiz App",
-  "short_name": "Quiz App",
-  "version": "QuizApp",
-  "description": "Hello World sample application that responds to the deviceready event.",
+  "name": "Movie Quiz App",
+  "short_name": "Movie Quiz App",
+  "version": "QuestionApp",
+  "description": "This is the App for user to take movie filming location quiz",
   "author": "PhoneGap Team",
   "icons": [],
   "start_url": "index.html"

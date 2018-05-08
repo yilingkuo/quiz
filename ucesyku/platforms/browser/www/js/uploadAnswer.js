@@ -35,23 +35,22 @@ function dataUploaded() {
 
 }
 
+// Loop through the question JSON data and get the properties needed
+// questiondata is request(GET) from "http://developer.cege.ucl.ac.uk:30269/getPOI" after loading the question from server
 function checkCorrectAnswer(questionid, answer){
-	alert(questionid+ ' take user answer:'+answer);
-	
-function compareUserAnswer(questiondata){
+	//convert text to JSON
 	var questionjson=JSON.parse(questiondata);
 	alert(questionjson[0].type);
 	
 	for(var i = 0; i < questionjson[0].features.length; i++) {
 	var feature = questionjson[0].features[i];
-	if (questionid==feature["properties"]["id"]){
-		alert('loop to'+questionid+feature["properties"]["id"]+'now')
+	// start compare if question number matches	
+	if (questionid==feature["properties"]["id"])
+// set condition whether user answer matches with correct_answer
 		if (answer==feature["properties"]["correct_answer"]){
 		alert('You are correct, the answer is: '+feature["properties"]["correct_answer"])}
-		else{alert('Wrong answer! The correct answer is:'+feature["properties"]["correct_answer"])}
-	}else{alert('next one!')}
-			
-	}
-}
-compareUserAnswer(questiondata);	
+		else{alert('Wrong answer! The correct answer is:'+feature["properties"]["correct_answer"])};		
+	};
+
+	
 }
