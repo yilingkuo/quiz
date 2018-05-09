@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "Movie Quiz App",
   "short_name": "Movie Quiz App",
-  "version": "QuestionApp",
+  "version": "MovieQuizApp",
   "description": "This is the App for user to take movie filming location quiz",
   "author": "PhoneGap Team",
   "icons": [],

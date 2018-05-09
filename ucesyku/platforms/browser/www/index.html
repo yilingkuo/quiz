@@ -38,7 +38,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
+    <title>Movie Quiz App</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -65,8 +65,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-amber.min.css">
     <link rel="stylesheet" href="css/styles.css">
+	<!-- this define the style of user guide button -->
     <style>
-    #view-source {
+    #help {
       position: fixed;
       display: block;
       right: 0;
@@ -75,12 +76,39 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+	#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
     </style>
 	
 	
 
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+  <!-- User guide displays with dark overlay background -->
+  <div id='overlay' onclick="off()">
+  <div id='userguide'></div>
+  </div>
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         
@@ -145,7 +173,7 @@
 			  <div id="dataUploadResult" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
 			<h4>The result of the upload goes here</h4>
 			</div>
-            </div>
+            </section>
 
         </div>
         </main>
@@ -154,5 +182,10 @@
 	<!--contain map related activity: include basemap, onLocationFound(), getCoords() -->
 	<script src="js/activity.js"></script>
 	<script src="js/uploadAnswer.js"> </script>
+	<!-- Add user guide button with AJAX action here -->
+	<a target="_blank" id="help" onclick="callDivChange();on()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Help</a>
+<script src='js/testAJAX.js'></script>
+
+
   </body>
 </html>
